@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info</title>
+</head>
+<body>
+    <H1>{{AShow}}</H1>
+
+    <h3>Title:{{AShow.Title}}</h3> 
+    <h3>Network: {{AShow.Network}}</h3>
+    <h3>Release Date: {{AShow.Release_Date}}</h3>
+    <h3>Description: {{AShow.Description}}</h3>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h4>Last Updated: {{AShow.update_at}}</h4>
+    <h4><a href="/shows/edit/{{AShow.id}}">Edit</a> | <a href="/shows/delete/{{AShow.id}}">Delete</a></h4>
+</body>
+</html>

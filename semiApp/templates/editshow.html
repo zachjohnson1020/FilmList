@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Show</title>
+</head>
+
+<body>
+    <h1>Edit {{AShow}}</h1>
+    {% if messages %}
+    {% for message in messages %}
+        <p style="color: red;">{{message}}</p>
+    {% endfor %}
+{% endif %}
+    <form action="/shows/edit/{{AShow.id}}" method="post">
+        {% csrf_token %}
+        Title <br>
+        <input type="text" name="title" id="">
+        <br>
+        <p>Network</p><p>Release Date</p>
+        <input type="text" name="network" id="">
+        <input type="date" name="reldate" id="">
+        <br>
+        Description <br>
+        <textarea name="desc" id="" cols="30" rows="7"></textarea>
+        <br>
+        <input type="submit" value="Update">
+        <a href="/shows/info/{{AShow.id}}">Go to show</a>
+    </form>
+
+</body>
+
+</html>
